@@ -38,7 +38,7 @@ def analyze_bottlenecks(traceroute_output, threshold=1.5):
         print(f"{hop_num}\t{avg_rtt:.2f}\t\t{note}")
         previous_avg = avg_rtt
 
-def run_and_analyze(domain):
+def run_and_analyse(domain):
     try:
         result = subprocess.run(["traceroute", domain], capture_output=True, text=True)
         output = result.stdout
@@ -49,5 +49,5 @@ def run_and_analyze(domain):
     except Exception as e:
         print(f"Error: {e}")
 
-# Example: Run analysis for www.google.com
-run_and_analyze("www.google.com")
+#example: Run analysis for www.google.com
+run_and_analyse("www.google.com")
